@@ -35,6 +35,18 @@ div {
 	transform: skew(20deg);
 }
 
+img {
+	width: 300px;
+	display: block;
+	margin: auto;
+	margin-top: 200px;
+	transition: transform 2s;
+}
+
+img:hover {
+	transform: translate(-500px, 200px);
+}
+
 </style>
 </head>
 
@@ -44,6 +56,8 @@ div {
 	<div class="translate">translate me</div>
 	<div class="rotate">rotate me</div>
 	<div class="skew">skew me</div>
+
+	<img src="cat.jpg" alt="">
 
 </body>
 </html>
