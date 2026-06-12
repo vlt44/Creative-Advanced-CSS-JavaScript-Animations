@@ -47,7 +47,16 @@ img:hover {
 	/* transform: translate(-500px, 200px); */
 	/* transform: scale(2); */
 	/* transform: rotate(200grad); */
-	transform: skew(20deg, 40deg);
+	/* transform: skew(20deg, 40deg); */
+}
+
+.second {
+	transform-origin: top left;
+	margin-bottom: 0;
+}
+
+.first:hover, .second:hover {
+	transform: rotate(30deg);
 }
 
 </style>
@@ -60,7 +69,8 @@ img:hover {
 	<div class="rotate">rotate me</div>
 	<div class="skew">skew me</div>
 
-	<img src="cat.jpg" alt="">
-
+	<img src="cat.jpg" alt="" class="first">
+	<img src="cat.jpg" alt="" class="second">
+	
 </body>
 </html>
