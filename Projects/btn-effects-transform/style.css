@@ -3,9 +3,20 @@ body {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	flex-direction: column;
 }
 
-a {
+.btn {
+	display: inline-block;
+	position: relative;
+	overflow: hidden;
+	text-decoration: none;
+	font-family: sans-serif;
+	padding: 40px 80px;
+}
+
+.rotating {
+	display: inline-block;
 	text-decoration: none;
 	color: #262626;
 	font-family: sans-serif;
@@ -16,7 +27,7 @@ a {
 	overflow: hidden; /* to hide the before element when it is rotated */
 }
 
-a:before {
+.rotating::before {
 	content: '';
 	position: absolute;
 	left: 0;
@@ -26,10 +37,45 @@ a:before {
 	width: 100%;
 	z-index: -1;
 	transform-origin: bottom right;
- 	transform: rotate(90deg);
+	transform: rotate(90deg);
 	transition: transform 1s;
 }
 
-a:hover:before {
+.rotating:hover::before {
 	transform: rotate(0deg); /* rotate back to original position */
+}
+
+
+.swipe {
+display: inline-block;
+text-decoration: none;
+color: #351435;
+font-family: sans-serif;
+font-size: 40px;
+border: 3px solid #351435;
+padding: 40px 80px;
+position: relative;
+transition: all 1s;
+overflow: hidden;
+}
+
+.swipe::before {
+	content: '';
+	position: absolute;
+	left: 0;
+	top: 0;
+	height: 100%;
+	width: 100%;
+	background-color: #351435;
+	z-index: -1;
+	transform: translateY(-100%);
+	transition: all 1s;
+}
+
+.swipe:hover::before {
+	transform: translateY(0);
+}
+
+.swipe:hover {
+	color: white;
 }
