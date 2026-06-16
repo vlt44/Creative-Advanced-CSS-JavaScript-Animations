@@ -73,3 +73,46 @@ body {
 .swipe:hover {
 	color: white;
 }
+
+.hovering {
+	color: #262626;
+	border: 5px solid #262626;
+}
+
+.hovering::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: #262626;
+	transition: 1s;
+	transform: rotateX(90deg);
+	z-index: -1;
+}
+
+.hovering::after {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: #262626;
+	transition: 1s;
+	transform: rotateY(90deg);
+	z-index: -1;
+}
+
+.hovering:hover:before {
+	transform: rotateX(0);
+}
+
+.hovering:hover:after {
+	transform: rotateY(0);
+}
+
+.hovering:hover {
+	color: white;
+}
